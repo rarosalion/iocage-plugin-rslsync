@@ -11,10 +11,10 @@ chown rslsync:rslsync /var/db/rslsync
 ## install bin
 fetch -o /tmp https://download-cdn.resilio.com/stable/freebsd/x64/0/resilio-sync_freebsd_x64.tar.gz
 tar xvf /tmp/resilio-sync_freebsd_x64.tar.gz -C /usr/local/bin/
-rm -f /usr/local/bin/LICENSE.TXT /tmp/resilio-sync_freebsd_x64.tar.gz
+rm /usr/local/bin/LICENSE.TXT /tmp/resilio-sync_freebsd_x64.tar.gz
 
 # enable the service
 sysrc rslsync_enable="YES"
 
 # start the service
-service rslsync start 2>/dev/null
+service rslsync start # 2>/dev/null
