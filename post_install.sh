@@ -17,7 +17,9 @@ rm /usr/local/bin/LICENSE.TXT /tmp/resilio-sync_freebsd_x64.tar.gz
 sysrc rslsync_enable="YES"
 
 # start the service
-find -type d /usr/local/etc -exec chmod 755 {} \;
+chmod 755 /usr/
+chmod 755 /usr/local/
+chmod 755 /usr/local/etc/
 chmod 644 /usr/local/etc/rslsync.conf
 ls -alF /usr/local/etc/
 service rslsync start # 2>/dev/null
